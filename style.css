@@ -1,0 +1,171 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: black;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  z-index: 0;
+}
+
+#text-box {
+  position: absolute;
+  top: 48%;   /* higher than before */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  max-width: 95%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 60px 80px;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  z-index: 1;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
+  opacity: 0;
+  animation: fadeInUp 1.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -42%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+#text-box h1 {
+  font-size: 2.5em;
+  margin: 10px 0 15px;
+  font-weight: 500;
+}
+
+#text-box p {
+  font-size: 1.2em;
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+
+/* Socials */
+#socials {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.discord-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  background: rgba(114, 137, 218, 0.1);
+  border: 1px solid rgba(114, 137, 218, 0.3);
+  border-radius: 10px;
+  color: white;
+  font-weight: 500;
+  font-size: 1.1em;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+}
+.discord-link:hover {
+  background: rgba(114, 137, 218, 0.2);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(114, 137, 218, 0.6);
+}
+.discord-logo {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+/* Skills badges */
+#skills {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.skill {
+  background: rgba(255,255,255,0.1);
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-weight: 500;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+  transition: transform 0.3s, background 0.2s; /* increased transform duration */
+}
+
+/* Hover effect: scale + float up */
+.skill:hover {
+  transform: scale(1.1) translateY(-5px);
+  background: rgba(30,215,96,0.2);
+}
+
+
+/* Flag Counter */
+.flag-counter {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 5;
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.85em;
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+  z-index: 5;
+}
+
+/* Profile Pic */
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 2px solid rgba(255,255,255,0.3);
+  box-shadow: 0 0 15px rgba(255,255,255,0.2);
+}
+
+/* Spotify link */
+.spotify-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 30px;
+  padding: 10px 20px;
+  background: rgba(30, 215, 96, 0.1);
+  border: 1px solid rgba(30, 215, 96, 0.3);
+  border-radius: 10px;
+  color: white;
+  font-weight: 500;
+  font-size: 1.1em;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+}
+.spotify-link:hover {
+  background: rgba(30, 215, 96, 0.2);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(30, 215, 96, 0.6);
+}
+.spotify-logo {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
